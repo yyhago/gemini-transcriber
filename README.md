@@ -1,11 +1,10 @@
 # 📹 YouTube Video Summarizer
 
-Um sistema que extrai transcrições de vídeos do YouTube e gera resumos concisos usando a API do Gemini AI.
+Uma base de um sistema que extrai transcrições de vídeos do YouTube e gera resumos concisos usando a API do Gemini AI.
 
 ## 🚀 Funcionalidades
 
-* 🔍 Extrai o ID do vídeo de qualquer formato de URL do YouTube
-* 📝 Obtém a transcrição automática (legendas) em português ou inglês
+* 📝 Extrai o conteúdo de vídeos no YouTube gerando transcrições automáticas (legendas) em português ou inglês 
 * ✨ Gera resumos inteligentes usando o modelo Gemini Pro
 * 🎯 Interface simples e intuitiva com Streamlit
 
