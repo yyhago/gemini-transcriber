@@ -4,7 +4,7 @@ Uma base de um sistema que extrai transcrições de vídeos do YouTube e gera re
 
 ## 🚀 Funcionalidades
 
-* 📝 Extrai o conteúdo de vídeos no YouTube gerando transcrições automáticas (legendas) em português ou inglês 
+* 📝 Extrai o conteúdo de vídeos no YouTube gerando transcrições (legendas) em português ou inglês 
 * ✨ Gera resumos inteligentes usando o modelo Gemini Pro
 * 🎯 Interface simples e intuitiva com Streamlit
 
@@ -18,8 +18,8 @@ Uma base de um sistema que extrai transcrições de vídeos do YouTube e gera re
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/yyhago/gemini-chatbot.git
-cd gemini-chatbot
+git clone https://github.com/yyhago/gemini-transcriber.git
+cd gemini-transcriber
 ```
 
 2. Crie e ative um ambiente virtual:
@@ -53,7 +53,7 @@ streamlit run src/main.py
 ## 🧩 Estrutura do Projeto
 
 ```
-gemini-chatbot/
+gemini-transcriber/
 ├── src/
 │   ├── main.py            # Aplicativo principal (Streamlit)
 │   ├── youtube_utils.py   # Funções para processar vídeos
