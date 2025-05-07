@@ -8,6 +8,7 @@ logger = logging.getLogger(__name__)
 def extract_video_id(url: str) -> str | None:
     """Extrai ID do vídeo de URLs do YouTube."""
     if not url:
+        logger.error("URL vazia recebida")
         return None
         
     url = url.strip()
@@ -34,8 +35,8 @@ def extract_video_id(url: str) -> str | None:
         match = re.search(r'(?:v=|youtu\.be\/|embed\/)([\w-]{11})', url)
         return match.group(1) if match else None
         
-    except Exception:
-        logger.exception("Falha ao extrair ID do vídeo")
+    except Exception as e:
+        logger.error(f"Falha ao extrair ID do vídeo: {str(e)}")
         return None
 
 def get_video_title(video_id: str) -> str | None:
@@ -46,7 +47,8 @@ def get_video_title(video_id: str) -> str | None:
             timeout=10
         )
         return response.json().get('title') if response.ok else None
-    except Exception:
+    except Exception as e:
+        logger.error(f"Erro ao obter título do vídeo: {str(e)}")
         return None
 
 def get_video_transcript(video_id: str) -> tuple[str | None, Exception | None]:
@@ -61,4 +63,4 @@ def get_video_transcript(video_id: str) -> tuple[str | None, Exception | None]:
             return None, e
             
     except ImportError:
-        return None, ImportError("Instale youtube-transcript-api")
+        return None, ImportError("Biblioteca youtube-transcript-api não instalada")

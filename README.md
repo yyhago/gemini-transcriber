@@ -2,6 +2,9 @@
 
 Uma base de um sistema que extrai transcrições de vídeos do YouTube e gera resumos concisos usando a API do Gemini AI.
 
+## 🖼️ Projeto:
+![Pagina Inicial](./assets/image.png)
+
 ## 🚀 Funcionalidades
 
 * 📝 Extrai o conteúdo de vídeos no YouTube gerando transcrições (legendas) em português ou inglês 
